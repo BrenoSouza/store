@@ -9,6 +9,58 @@
   </head>
 
   <body>
-    <%= yield %>
+     <nav class="navbar navbar-dark bg-dark navbar-fixed-top">
+      <a class="NOnavbar-brand" href="#/home">
+        <p class="logo">Nerb Store</p>
+      </a>
+    </nav>
+
+    <div id="wrapper">
+      <div id="sidebar-wrapper" >
+        <ul class="sidebar-nav">
+          <li>
+            <a href="home">
+              <span class="glyphicon glyphicon-home"></span>
+              <span class="menu-option"> Início</span>
+            </a>
+          </li>
+          <li>
+            <a href="products">
+              <span class="glyphicon glyphicon-list-alt"></span>
+              <span class="menu-option"> Produtos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#/statistics">
+              <span class="glyphicon glyphicon-stats"></span>
+              <span class="menu-option"> Estatísticas</span>
+            </a>
+          </li>
+          <li>
+            <a href="#/configurations">
+              <span class="glyphicon glyphicon-cog"></span>
+              <span class="menu-option"> Configurações</span>
+            </a>
+          </li>
+          <li>
+            <a href="#/about">
+              <span class="glyphicon glyphicon-user"></span>
+              <span class="menu-option"> Sobre</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="view-container" id="wrapper">
+                <%= yield %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
