@@ -1,0 +1,133 @@
+<div class="products-container" >
+    <div class="card shadow">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100">
+            </div>
+            <div class="col-md-8 px-3">
+                <div class="card-block px-3">
+                    <h3 class="card-title">Nome Produto</h3>
+                    <p class="card-text"><b>Descrição:</b> bla bla bla bla bla bla bla bla bla</p>
+                    <p class="card-text"><b>Preço:</b> 500,00 R$</p>
+                    <div class="row">
+                        <div class="col-10">
+                            <p class="card-text"><b>Categoria: </b></a>
+                            </div>
+                            <div class="icon col-1">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </div>
+                            <div class="icon col-1">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card shadow">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100">
+                </div>
+                <div class="col-md-8 px-3">
+                    <div class="card-block px-3">
+                        <h3 class="card-title">Nome Produto</h3>
+                        <p class="card-text"><b>Descrição:</b> bla bla bla bla bla bla bla bla bla</p>
+                        <h5 class="card-text"><b>Preço:</b> 500,00 R$</h5>
+                        <div class="row">
+                            <div class="col-10">
+                                <p class="card-text"><b>Categoria: </b></a>
+                                </div>
+                                <div class="col-1">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </div>
+                                <div class="col-1">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div class="card shadow">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100">
+                    </div>
+                    <div class="col-md-8 px-3">
+                        <div class="card-block px-3">
+                            <h3 class="card-title">Nome Produto</h3>
+                            <p class="card-text"><b>Descrição:</b> bla bla bla bla bla bla bla bla bla</p>
+                            <h5 class="card-text"><b>Preço:</b> 500,00 R$</h5>
+                            <div class="row">
+                                <div class="col-10">
+                                    <p class="card-text"><b>Categoria: </b></a>
+                                    </div>
+                                    <div class="col-1">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </div>
+                                    <div class="col-1">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="float text-center" data-toggle="modal" data-target="#NewProductModal" href="">
+                    <p class="my-float">+</p>
+                </a>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="NewProductModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <p class="modal-title">Adicionar novo produto</p>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group-lg col-md-12">
+                                            <label for="name">Nome do produto</label>
+                                            <input type="text" class="form-control" id="name" placeholder="Nome do Produto">
+                                        </div>
+                                    </div>
+                                    <div class="form-group-lg">
+                                        <label for="description">Descrição</label>
+                                        <textarea class="form-control" id="description" rows="3"></textarea>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group-lg col-md-6">
+                                            <label for="price">Preço</label>
+                                            <input type="text" class="form-control" id="price" placeholder="Preço">
+                                        </div>
+                                        <div class="form-group-lg col-md-6">
+                                            <label for="category">Categoria</label>
+                                            <select id="category" class="form-control">
+                                                <option selected>Eletrônicos</option>
+                                                <option>Vestuário</option>
+                                                <option>Brinquedos</option>
+                                                <option>Livros</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group-lg col-md-12">
+                                            <label for="image-url">Url imagem</label>
+                                            <input type="url" class="form-control" id="image-url" placeholder="Url da imagem">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-primary">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

@@ -1,4 +1,3 @@
 Rails.application.routes.draw do
-  root 'products#index'
-  resources :products
+  root 'application#home'
 end
