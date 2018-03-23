@@ -10,9 +10,15 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             url: '/produtos',
             templateUrl: 'products/products.html',
             controller: 'ProductsController'
+        })
+
+        .state('novo-produto', {
+            url: '/novo-produto',
+            templateUrl: 'newProduct/newProduct.html',
+            controller: 'NewProductController'
         });
 
     $urlRouterProvider
-        .otherwise('/home');
+        .otherwise('/produtos');
 
 }]);

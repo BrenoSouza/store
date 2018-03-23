@@ -4,83 +4,116 @@
 
 .products-container {
     font-size: 14px;
-  
+    
+    .thumbnail {
+        width:100%;
+        min-width: 210px;
+        
+        img {
+            max-width:200px;
+            max-height: 200px;
+            min-width:200px;
+            min-height: 200px;
+        }
+    }
+    
+    .thumbnail.right-caption > img {
+        float: left;
+        margin-right: 9px;
+    }
+    
+    .thumbnail.right-caption {
+        float: left;
+    }
+    
+    .thumbnail.right-caption > .caption {
+        padding: 4px;
+    }
+    ​
+    
+    
     .card {
-      
-        margin-top: 10px;
+        
         &:hover {
             position:relative;
             box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 10px 10px rgba(0,0,0,0.24);
             transition: all 0.3s cubic-bezier(.25,.8,.25,1);
         }
     }
-
+    
     .float {
-      position:fixed;
-      width:60px;
-      height:60px;
-      bottom:40px;
-      right:40px;
-      background-color: #4f5d69;
-      color:#FFF;
-      border-radius:50px;
-      text-align:center;
-      box-shadow: 2px 2px 3px #999;
-  
-      .my-float {
-        display: block;
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:40px;
+        right:40px;
+        background-color: #4f5d69;
+        color:#FFF;
+        border-radius:50px;
         text-align:center;
-        color: white;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 0;
-        margin: 0;
-        line-height: 55px;
-        font-size: 38px;
-        font-family: 'Roboto';
-        font-weight: 300;
-        animation: plus-out 0.3s;
-        transition: all 0.3s;
-      }
+        box-shadow: 2px 2px 3px #999;
+        
+        .my-float {
+            display: block;
+            text-align:center;
+            color: white;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0;
+            margin: 0;
+            line-height: 55px;
+            font-size: 38px;
+            font-family: 'Roboto';
+            font-weight: 300;
+            animation: plus-out 0.3s;
+            transition: all 0.3s;
+        }
     }
-
+    
     .icon {
         .glyphicon {
             font-size: 20px;
         }
-
+        
         &:hover {
             cursor: pointer;
         }
     }
-
-    .modal {
-        font-size: 16px;
-
-        .modal-header {
-            background-color: #343a40;
-            color: white;
-
-            .close {
-                color:white;
-            }
-        }
-
-        .modal-footer {
-            height: 56px!important;
-            
-            button {
-                height: 100%;
-                font-size: 16px;
-            }
-        }
-    }
-
-
+    
+    
     #category {
         height: 46px !important;
+    }
+    
+}
+
+.modal-header {
+    background-color: #54575a;
+    color: white;
+    
+    h2 {
+        padding-top:0 !important;
+    }
+    
+}
+
+.modal-footer {
+    height: 10%!important;
+    
+    button {
+        margin-top: 15px;
+        margin-right: 15px;
+        height: 20%;
+        font-size: 16px;
+    }
+}
+
+.modal-body {
+    .txt-area {
+        margin-left: 15px;
+        margin-right: 15px;
     }
 }

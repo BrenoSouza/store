@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  root 'application#home'
+  root :to => 'application#home'
+
+  resources :product, only: [:index, :show, :create, :update, :destroy]
+
 end
