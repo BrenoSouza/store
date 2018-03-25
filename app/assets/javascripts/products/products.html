@@ -1,16 +1,16 @@
-<div class="products-container" >
-    <div ng-repeat="product in products">
-        <div class="thumbnail right-caption span4 card">
-            <img ngIf="product.url.length < 5" src="{{product.url}}" alt="Sem Imagem">
-            <div class="caption">
-                <h3>{{ product.name }}</h3>
-                <p>{{ product.description }}</p>
-                <h4>{{ product.price }} R$</h4>
-                <p><a href="#" ng-click="delete(product.id)" class="btn btn-primary">Delete</a></p>
+<div class="products-container">
+    <div class="row">
+        <div ng-repeat="product in products" class="col">
+            <div class="thumbnail card">
+                <img src="{{product.url}}" alt="...">
+                <div class="caption">
+                    <h4>{{ product.name }}</h4>
+                    <h5>{{ product.name }}</h5>
+                    <h2>{{ product.price }} R$</h2>
+                </div>
             </div>
         </div>
     </div>
-    
     
     <a class="float text-center" data-toggle="modal" ui-sref="novo-produto">
         <p class="my-float">+</p>

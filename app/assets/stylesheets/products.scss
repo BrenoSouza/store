@@ -5,40 +5,38 @@
 .products-container {
     font-size: 14px;
     
-    .thumbnail {
-        width:100%;
-        min-width: 210px;
-        
-        img {
-            max-width:200px;
-            max-height: 200px;
-            min-width:200px;
-            min-height: 200px;
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+      
+        .col {
+            width: 33%;
+            padding: 8px;
+            min-width: 200px;
         }
-    }
-    
-    .thumbnail.right-caption > img {
-        float: left;
-        margin-right: 9px;
-    }
-    
-    .thumbnail.right-caption {
-        float: left;
-    }
-    
-    .thumbnail.right-caption > .caption {
-        padding: 4px;
-    }
-    ​
-    
-    
-    .card {
+
+        .thumbnail {
+            width:100%;
+            min-width: 210px;
         
-        &:hover {
-            position:relative;
-            box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 10px 10px rgba(0,0,0,0.24);
-            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+            img {
+                max-width:200px;
+                max-height: 200px;
+                min-width:200px;
+                min-height: 200px;
+            }
         }
+    
+        .card {
+        
+            &:hover {
+                cursor: pointer;
+                position: relative;
+                box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 10px 10px rgba(0,0,0,0.24);
+                transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+            }
+        }
+
     }
     
     .float {
