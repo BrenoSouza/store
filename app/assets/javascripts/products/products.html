@@ -1,8 +1,8 @@
 <div class="products-container">
     <div class="row">
         <div ng-repeat="product in products" class="col">
-            <div class="thumbnail card">
-                <img src="{{product.url}}" alt="...">
+            <div class="thumbnail card"  ng-click="delete(product.id)">
+                <img src="{{product.url}}" alt="sem foto">
                 <div class="caption">
                     <h4>{{ product.name }}</h4>
                     <h5>{{ product.name }}</h5>
