@@ -1,5 +1,5 @@
 app.factory('ProductFactory', ['$http', function($http) {
-    
+   
     let url = '/product';
     
     return {

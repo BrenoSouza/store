@@ -1,13 +1,10 @@
-app.controller('ProductsController', ProductsController);
-
-function ProductsController($scope, $http, $state, ProductFactory) {
+app.controller('ProductsController', function ($scope, $http, $state, ProductFactory) {
 
 	$scope.products = [];
     
     ProductFactory.getProduct().then(function (response) {
         $scope.products = response.data;
     });
-
 
     $scope.delete = function(id) {
         ProductFactory.deleteProduct(id)
@@ -28,4 +25,4 @@ function ProductsController($scope, $http, $state, ProductFactory) {
             console.error(error);
         })
     }
-}
+});
