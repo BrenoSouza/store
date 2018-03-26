@@ -18,8 +18,6 @@ app.controller('ProductsController', function ($scope, $http, $state, ProductFac
             });
 
             $scope.products = products;
-            
-            console.log(response)
         })
         .catch(function (error) {
             console.error(error);
