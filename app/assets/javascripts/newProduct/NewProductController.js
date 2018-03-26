@@ -3,8 +3,11 @@ app.controller('NewProductController', NewProductController);
 function NewProductController($scope, $http, $state, ProductFactory) {
 
 	$scope.newProduct = {};
+    $scope.isLoading = false;
 
     $scope.addNewProduct = function() {
+        $scope.isLoading = true;
+        
         if ($scope.newProduct.name && $scope.newProduct.price) {
             $scope.newProduct.likes = 0;
             $scope.newProduct.dislikes = 0;
@@ -16,6 +19,7 @@ function NewProductController($scope, $http, $state, ProductFactory) {
 
             ProductFactory.createProduct($scope.newProduct)
             .then(function (response) {
+                $scope.isLoading = false;
                 $state.go('produtos');
                 $scope.newProduct = {};
             })

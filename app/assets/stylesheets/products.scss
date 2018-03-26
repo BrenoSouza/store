@@ -9,6 +9,21 @@
         display: flex;
         flex-wrap: wrap;
       
+        .products-icons {
+            width: 50%;
+            font-size: 25px;
+            margin-top:2px;
+
+            .glyphicon {
+                margin-left: 5px!important;
+                cursor: pointer;
+            }
+        }
+
+        h3 {
+            margin: 2px 2px 2px 14px;
+        }
+
         .col {
             width: 33%;
             padding: 8px;
@@ -36,7 +51,6 @@
         .card {
         
             &:hover {
-                cursor: pointer;
                 position: relative;
                 box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 10px 10px rgba(0,0,0,0.24);
                 transition: all 0.3s cubic-bezier(.25,.8,.25,1);

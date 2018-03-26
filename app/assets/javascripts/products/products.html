@@ -6,7 +6,7 @@
 <div class="products-container">
     <div class="row">
         <div ng-repeat="product in products | filter: searchProduct" class="col">
-            <div class="thumbnail card"  ng-click="delete(product.id)">
+            <div class="thumbnail card">
                 <div class="label-category text-right">
                     <span class="label label-primary">{{product.category}}</span>
                 </div>
@@ -14,12 +14,19 @@
                 <div class="caption">
                     <h4>{{ product.name }}</h4>
                     <h5>{{ product.description }}</h5>
-                    <h2>{{ product.price }} R$</h2>
+                    <div class="row">
+                        <h3>{{ product.price }} R$</h3>
+                        <div class="products-icons text-right">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-trash" ng-click="delete(product.id)"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
+    <div class="loader" ng-if="onLoading"></div>
+
     <a class="float text-center" data-toggle="modal" ui-sref="novo-produto">
         <p class="my-float">+</p>
     </a>
