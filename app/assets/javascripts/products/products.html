@@ -6,7 +6,7 @@
 <div class="products-container">
     <div class="row">
         <div ng-repeat="product in products | filter: searchProduct" class="col">
-            <div class="thumbnail card">
+            <div class="thumbnail card" ui-sref="editar-produto({ id: product.id})">
                 <div class="label-category text-right">
                     <span class="label label-primary">{{product.category}}</span>
                 </div>
@@ -15,11 +15,7 @@
                     <h4>{{ product.name }}</h4>
                     <h5>{{ product.description }}</h5>
                     <div class="row">
-                        <h3>{{ product.price }} R$</h3>
-                        <div class="products-icons text-right">
-                            <span class="glyphicon glyphicon-pencil" ui-sref="editar-produto({ id: product.id})"></span>
-                            <span class="glyphicon glyphicon-trash" ng-click="delete(product.id)"></span>
-                        </div>
+                        <h3><b>{{ product.price }} R$</b></h3>
                     </div>
                 </div>
             </div>

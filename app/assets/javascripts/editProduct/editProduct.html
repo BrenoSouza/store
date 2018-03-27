@@ -1,8 +1,8 @@
 
 
-<div class="panel panel-default edit-product-container" >
-    <div class="panel-heading">Editar Produto</div>
-    <div  class="add" aria-hidden="true">
+<div class="panel panel-default edit-product-container">
+    <div class="panel-heading"><h4>Editar Produto</h4></div>
+    <div class="add" aria-hidden="true" ng-if="!onLoading">
         <div class="panel-body">
             <form>
                 <div class="img-container">
@@ -47,7 +47,16 @@
                 </div>
             </form>
         </div>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" ui-sref="produtos">Cancelar</button>
-        <button type="button" class="btn btn-primary" ng-click="updateProduct()">Salvar</button>
+        <div class="action-buttons text-right">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" ui-sref="produtos">Cancelar</button>
+            <button type="button" class="btn btn-primary" ng-click="updateProduct()">Salvar</button>
+        </div>
     </div>
+    <div class="loader" ng-if="onLoading"></div>
+
+    <a class="float text-center" ng-click="delete(product.id)">
+        <div class="my-float">
+            <span class="glyphicon glyphicon-trash"></span>
+        </div>
+    </a>
 </div>

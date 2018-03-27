@@ -10,17 +10,6 @@ $overlay-trans-fuction: ease;
     .row {
         display: flex;
         flex-wrap: wrap;
-      
-        .products-icons {
-            width: 50%;
-            font-size: 25px;
-            margin-top:2px;
-
-            .glyphicon {
-                margin-left: 5px!important;
-                cursor: pointer;
-            }
-        }
 
         h3 {
             margin: 2px 2px 2px 14px;
@@ -35,6 +24,7 @@ $overlay-trans-fuction: ease;
         .thumbnail {
             width:100%;
             min-width: 210px;
+            cursor: pointer;
         
             img {
                 max-width:200px;
@@ -189,6 +179,39 @@ $overlay-trans-fuction: ease;
 
 
 .edit-product-container {
+
+    .float {
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:40px;
+        right:30px;
+        background-color: #4f5d69;
+        color:#FFF;
+        border-radius:50px;
+        text-align:center;
+        box-shadow: 2px 2px 3px #999;
+        cursor: pointer;
+        
+        .my-float {
+            display: block;
+            text-align: center;
+            color: white;
+            position: absolute;
+            top: 2px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0;
+            margin: 0;
+            line-height: 55px;
+            font-size: 18px;
+            font-family: 'Roboto';
+            font-weight: 300;
+            animation: plus-out 0.3s;
+            transition: all 0.3s;
+        }
+    }
     
     .img-container {
         text-align:center;
@@ -228,6 +251,11 @@ $overlay-trans-fuction: ease;
         -o-transition: all $overlay-trans-time $overlay-trans-fuction;
         -webkit-transition: all $overlay-trans-time $overlay-trans-fuction;
         width: 0;
+    }
+
+    .action-buttons {
+        margin-right: 7%;
+        margin-bottom: 10px;
     }
 
 }
