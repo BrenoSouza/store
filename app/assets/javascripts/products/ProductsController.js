@@ -28,4 +28,9 @@ app.controller('ProductsController', function ($scope, $http, $state, ProductFac
             console.error(error);
         })
     }
+
+    $scope.editProduct = function(id) {
+        $state.go('editar-produto/' + id);
+    }
+
 });

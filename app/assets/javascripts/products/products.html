@@ -17,7 +17,7 @@
                     <div class="row">
                         <h3>{{ product.price }} R$</h3>
                         <div class="products-icons text-right">
-                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-pencil" ui-sref="editar-produto({ id: product.id})"></span>
                             <span class="glyphicon glyphicon-trash" ng-click="delete(product.id)"></span>
                         </div>
                     </div>

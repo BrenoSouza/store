@@ -16,7 +16,8 @@ class ProductController < ApplicationController
     end
   
     def show
-        render json: @product
+        product = Product.find(params[:id])
+        render json: product
     end
   
     def update

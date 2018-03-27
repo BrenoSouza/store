@@ -4,6 +4,7 @@ app.factory('ProductFactory', ['$http', function($http) {
     
     return {
         getProduct: getProduct,
+        getProductById: getProductById,
         createProduct: createProduct,
         deleteProduct: deleteProduct,
         updateProduct: updateProduct
@@ -11,6 +12,10 @@ app.factory('ProductFactory', ['$http', function($http) {
 
     function getProduct() {
         return $http.get(url);
+    }
+
+    function getProductById(id) {
+        return $http.get(url + '/' + id);
     }
 
     function createProduct(product) {
@@ -33,8 +38,8 @@ app.factory('ProductFactory', ['$http', function($http) {
             .catch(handleError);
     };
 
-    function updateProduct(product_id, product) {
-        return $http.put(url + '/' + product_id, product)
+    function updateProduct(product) {
+        return $http.put(url + '/' + product.id, product)
             .then(handleResponse)
             .catch(handleError);
     }

@@ -12,6 +12,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             controller: 'ProductsController'
         })
 
+        .state('editar-produto', {
+            url: '/produtos/:id',
+            templateUrl: 'editProduct/editProduct.html',
+            controller: 'EditProductController'
+        })
+
         .state('novo-produto', {
             url: '/novo-produto',
             templateUrl: 'newProduct/newProduct.html',

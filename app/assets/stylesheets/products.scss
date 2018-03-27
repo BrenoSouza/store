@@ -1,6 +1,8 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$overlay-trans-time: 0.3s;
+$overlay-trans-fuction: ease;
 
 .products-container {
     font-size: 14px;
@@ -129,11 +131,9 @@
     }
 }
 
-.modal-body {
-    .txt-area {
-        margin-left: 15px;
-        margin-right: 15px;
-    }
+.txt-area {
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .search-product {
@@ -185,4 +185,49 @@
         color: #999;
     }
     
+}
+
+
+.edit-product-container {
+    
+    .img-container {
+        text-align:center;
+        width: 100%;
+    }
+
+    .thumbnail {
+        max-width: 100%;
+        display: inline-grid;
+        position: relative;
+        
+        &:hover {
+            .overlay {
+                left: 0;
+                width: 100%;
+                background-color: rgba(2, 2, 2, 0.582);
+            }
+        }
+
+        span {
+            margin-top: 50%;
+            font-size: 40px;
+            color: white;
+        }
+    }
+    
+    .overlay {
+        bottom: 0;
+        height: 100%;
+        left: 100%;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        transition: all $overlay-trans-time $overlay-trans-fuction;
+        -moz-transition: all $overlay-trans-time $overlay-trans-fuction;
+        -ms-transition: all $overlay-trans-time $overlay-trans-fuction;
+        -o-transition: all $overlay-trans-time $overlay-trans-fuction;
+        -webkit-transition: all $overlay-trans-time $overlay-trans-fuction;
+        width: 0;
+    }
+
 }
